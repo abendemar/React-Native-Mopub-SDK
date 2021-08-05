@@ -24,14 +24,14 @@ Pod::Spec.new do |s|
     
     s.subspec "MoPubSDK" do |ss|
         
-        ss.dependency 'mopub-ios-sdk', '~> 5.17.0'
+        ss.dependency 'mopub-ios-sdk', '~> 5.17'
         
         s.static_framework = true
     end
 
     # Required for Native Ads
     s.subspec "AdMob" do |ss|
-        ss.dependency 'MoPub-AdMob-Adapters', '~> 8.4.0.0'
+        ss.dependency 'MoPub-AdMob-Adapters', '~> 8.8.0.0'
     end
     s.subspec "FacebookAudienceNetwork" do |ss|
         ss.dependency 'MoPub-FacebookAudienceNetwork-Adapters', '~> 6.5.1.1'
