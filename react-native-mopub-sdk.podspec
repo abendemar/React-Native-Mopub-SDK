@@ -13,8 +13,10 @@ Pod::Spec.new do |s|
     s.license      = "MIT"
     # s.license    = { :type => "MIT", :file => "FILE_LICENSE" }
     s.author       = { "author" => "author@domain.cn" }
-    s.platform     = :ios, "7.0"
+    s.platform     = :ios, "10.0"
     s.source       = { :git => "https://github.com/aliasad106/React-Native-Mopub-SDK", :tag => "#{s.version}" }
+    
+    spec.pod_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e armv7 armv7s', 'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'i386 x86_64' }
     
     s.resources = "ios/**/*.{xib}"
     s.source_files = "ios/**/*.{h,m}"
@@ -24,17 +26,17 @@ Pod::Spec.new do |s|
     
     s.subspec "MoPubSDK" do |ss|
         
-        ss.dependency 'mopub-ios-sdk', '~> 5.16.2'
+        ss.dependency 'mopub-ios-sdk', '~> 5.18.0'
         
         s.static_framework = true
     end
 
     # Required for Native Ads
     s.subspec "AdMob" do |ss|
-        ss.dependency 'MoPub-AdMob-Adapters', '~> 8.4.0.0'
+        ss.dependency 'MoPub-AdMob-Adapters', '~> 8.8.0.0'
     end
     s.subspec "FacebookAudienceNetwork" do |ss|
-        ss.dependency 'MoPub-FacebookAudienceNetwork-Adapters', '~> 6.4.1.0'
+        ss.dependency 'MoPub-FacebookAudienceNetwork-Adapters', '~> 6.5.1.1'
     end
 end
 
