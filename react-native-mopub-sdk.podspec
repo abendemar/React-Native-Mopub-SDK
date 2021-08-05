@@ -16,8 +16,6 @@ Pod::Spec.new do |s|
     s.platform     = :ios, "10.0"
     s.source       = { :git => "https://github.com/aliasad106/React-Native-Mopub-SDK", :tag => "#{s.version}" }
     
-    spec.pod_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64 arm64e armv7 armv7s', 'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'i386 x86_64' }
-    
     s.resources = "ios/**/*.{xib}"
     s.source_files = "ios/**/*.{h,m}"
     s.requires_arc = true
