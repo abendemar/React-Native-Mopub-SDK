@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "16.8.3",
     "react-native": "0.59.5",
-    "react-native-mopub-sdk": "../react-native-mopub-sdk-1.0.0.tgz"
+    "react-native-mopub-sdk": "https://github.com/senolatac/React-Native-Mopub-SDK.git"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
