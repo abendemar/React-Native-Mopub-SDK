@@ -7,8 +7,8 @@
 
 #import "RCTView.h"
 #import "MPNativeAdRendering.h"
-//#import "MPGoogleAdMobNativeRenderer.h"
-//#import "FacebookNativeAdRenderer.h"
+#import "MPGoogleAdMobNativeRenderer.h"
+#import "FacebookNativeAdRenderer.h"
 #import <mopub-ios-sdk/MoPub.h>
 
 @interface RNNativeAdView : UIView <MPNativeAdRendering>
