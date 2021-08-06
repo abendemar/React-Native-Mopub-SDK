@@ -39,18 +39,18 @@
     MPStaticNativeAdRendererSettings *settings = [[MPStaticNativeAdRendererSettings alloc] init];
     settings.renderingViewClass = [RNNativeAdView class];
     // Mopub rendered
-    MPNativeAdRendererConfiguration *mopubConfiguration = [MPStaticNativeAdRenderer rendererConfigurationWithRendererSettings:settings];
+    //MPNativeAdRendererConfiguration *mopubConfiguration = [MPStaticNativeAdRenderer rendererConfigurationWithRendererSettings:settings];
     // Google rendered
-    MPNativeAdRendererConfiguration *googleConfiguration = [MPGoogleAdMobNativeRenderer rendererConfigurationWithRendererSettings:settings];
+    //MPNativeAdRendererConfiguration *googleConfiguration = [MPGoogleAdMobNativeRenderer rendererConfigurationWithRendererSettings:settings];
     // Facebook rendered
-    MPNativeAdRendererConfiguration *fbConfiguration = [FacebookNativeAdRenderer rendererConfigurationWithRendererSettings:settings];
+    //MPNativeAdRendererConfiguration *fbConfiguration = [FacebookNativeAdRenderer rendererConfigurationWithRendererSettings:settings];
 
-    MPNativeAdRequest *adRequest = [MPNativeAdRequest requestWithAdUnitIdentifier:adUnitId rendererConfigurations:@[mopubConfiguration, googleConfiguration, fbConfiguration]];
+    //MPNativeAdRequest *adRequest = [MPNativeAdRequest requestWithAdUnitIdentifier:adUnitId rendererConfigurations:@[mopubConfiguration, googleConfiguration, fbConfiguration]];
     
     MPNativeAdRequestTargeting *targeting = [MPNativeAdRequestTargeting targeting];
     targeting.desiredAssets = [NSSet setWithObjects:kAdTitleKey, kAdTextKey, kAdCTATextKey, kAdIconImageKey, kAdMainImageKey, kAdStarRatingKey, nil]; //The constants correspond to the 6 elements of MoPub native ads
-    adRequest.targeting = targeting;
-    
+    //adRequest.targeting = targeting;
+    /*
     [adRequest startWithCompletionHandler:^(MPNativeAdRequest *request, MPNativeAd *response, NSError *error) {
         if (error) {
             self.onNativeAdFailed(@{@"error":error.localizedDescription});
@@ -72,6 +72,7 @@
             [nativeAdView layoutIfNeeded];
         }
     }];
+    */
 }
 
 - (void)willPresentModalForNativeAd:(MPNativeAd *)nativeAd {
