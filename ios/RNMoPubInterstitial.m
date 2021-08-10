@@ -2,6 +2,9 @@
 #import "RNMoPubInterstitial.h"
 #import <React/RCTLog.h>
 
+#import <MPGoogleGlobalMediationSettings.h>
+#import <VungleInstanceMediationSettings.h>
+
 #import "MoPub.h"
 #import "MPMoPubConfiguration.h"
 
