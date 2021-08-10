@@ -31,23 +31,23 @@ Pod::Spec.new do |s|
     
     # Required for Native Ads
     s.subspec "AdMob" do |ss|
-        ss.dependency 'MoPub-AdMob-Adapters', '~> 7.68.0.0'
+        ss.dependency 'MoPub-AdMob-Adapters', '7.68.0.0'
     end  
     
     s.subspec "Vungle" do |ss|
-        ss.dependency 'MoPub-Vungle-Adapters', '~> 6.8.1.0'
+        ss.dependency 'MoPub-Vungle-Adapters', '6.8.0.1'
     end
     
     s.subspec "AppLovin" do |ss|
-        ss.dependency 'MoPub-Applovin-Adapters', '~> 6.14.8.0'
+        ss.dependency 'MoPub-Applovin-Adapters', '6.14.4.1'
     end
     
     s.subspec "IronSource" do |ss|
-        ss.dependency 'MoPub-IronSource-Adapters', '~> 7.0.3.0.1'
+        ss.dependency 'MoPub-IronSource-Adapters', '7.0.3.0.1'
     end
     
     s.subspec "UnityAds" do |ss|
-        ss.dependency 'MoPub-UnityAds-Adapters', '~> 3.5.1.0'
+        ss.dependency 'MoPub-UnityAds-Adapters', '3.5.1.0'
     end
 end
 
