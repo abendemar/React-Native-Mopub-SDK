@@ -41,5 +41,17 @@ Pod::Spec.new do |s|
     s.subspec "Vungle" do |ss|
         ss.dependency 'MoPub-Vungle-Adapters', '~> 6.9.2.2'
     end
+    
+    s.subspec "AppLovin" do |ss|
+        ss.dependency 'MoPub-Applovin-Adapters', '~> 10.3.4.0'
+    end
+    
+    s.subspec "IronSource" do |ss|
+        ss.dependency 'MoPub-IronSource-Adapters', '~> 7.1.7.0.1'
+    end
+    
+    s.subspec "UnityAds" do |ss|
+        ss.dependency 'MoPub-UnityAds-Adapters', '~> 3.7.5.1'
+    end
 end
 
