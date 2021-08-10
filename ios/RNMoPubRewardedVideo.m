@@ -4,6 +4,7 @@
 
 #import <MPGoogleGlobalMediationSettings.h>
 #import <VungleInstanceMediationSettings.h>
+#import <UnityAdsInstanceMediationSettings.h>
 
 @implementation RNMoPubRewardedVideo
 
