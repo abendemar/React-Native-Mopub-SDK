@@ -2,6 +2,9 @@
 #import "MPRewardedVideo.h"
 #import <React/RCTLog.h>
 
+#import <MPGoogleGlobalMediationSettings.h>
+#import <VungleInstanceMediationSettings.h>
+
 @implementation RNMoPubRewardedVideo
 
 RCT_EXPORT_MODULE();
