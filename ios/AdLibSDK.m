@@ -10,6 +10,7 @@
 #import "MPMoPubConfiguration.h"
 #import "MPGoogleGlobalMediationSettings.h"
 #import "VungleInstanceMediationSettings.h"
+#import "UnityAdsInstanceMediationSettings.h"
 
 @implementation AdLibSDK
 
@@ -26,8 +27,9 @@ RCT_EXPORT_METHOD(initializeSDK:(NSString *)unitID)
 {
     MPGoogleGlobalMediationSettings *mpGoogleMediationSettings = [[MPGoogleGlobalMediationSettings alloc] init];
     VungleInstanceMediationSettings *vungleMediationSettings = [[VungleInstanceMediationSettings alloc] init];
+    UnityAdsInstanceMediationSettings *unityAdsMediationSettings = [[UnityAdsInstanceMediationSettings alloc] init];
     MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization: unitID];
-    sdkConfig.globalMediationSettings = [[NSArray alloc] initWithObjects: @[mpGoogleMediationSettings, vungleMediationSettings], nil];
+    sdkConfig.globalMediationSettings = [[NSArray alloc] initWithObjects: @[mpGoogleMediationSettings, vungleMediationSettings, unityAdsMediationSettings], nil];
     sdkConfig.loggingLevel = MPBLogLevelDebug;
     [[MoPub sharedInstance] grantConsent];
     [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig completion:^{
