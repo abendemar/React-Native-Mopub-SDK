@@ -32,11 +32,7 @@ Pod::Spec.new do |s|
     # Required for Native Ads
     s.subspec "AdMob" do |ss|
         ss.dependency 'MoPub-AdMob-Adapters', '~> 8.8.0.0'
-    end
-    
-    s.subspec "FacebookAudienceNetwork" do |ss|
-        ss.dependency 'MoPub-FacebookAudienceNetwork-Adapters', '~> 6.5.1.1'
-    end    
+    end  
     
     s.subspec "Vungle" do |ss|
         ss.dependency 'MoPub-Vungle-Adapters', '~> 6.9.2.2'
