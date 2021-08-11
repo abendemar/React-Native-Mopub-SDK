@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec "AppLovin" do |ss|
-        ss.dependency 'MoPub-Applovin-Adapters', '6.14.4.1'
+        ss.dependency 'MoPub-Applovin-Adapters', '10.3.4.0'
     end
     
     s.subspec "IronSource" do |ss|
