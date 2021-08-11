@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec "AppLovin" do |ss|
-        ss.dependency 'MoPub-Applovin-Adapters', '6.14.4.1', :git => 'https://github.com/senolatac/Specs.git'
+        ss.dependency 'MoPub-Applovin-Adapters', :path => '~/Documents/MoPub-Applovin-Adapters'
     end
     
     s.subspec "IronSource" do |ss|
