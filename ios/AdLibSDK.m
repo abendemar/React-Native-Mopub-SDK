@@ -24,7 +24,7 @@ RCT_EXPORT_MODULE();
 }
 
 
-RCT_EXPORT_METHOD(initializeSDK:(NSString *)unitID, (NSString *)ironSourceAppKey) 
+RCT_EXPORT_METHOD(initializeSDK:(NSString *)unitID, ironSourceAppKey:(NSString *)ironSourceAppKey) 
 {
     // declare your ironSource App Key and Ad Units
     NSDictionary * ironSourceConfig = @{@"applicationKey":ironSourceAppKey};
