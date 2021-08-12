@@ -24,8 +24,12 @@ RCT_EXPORT_MODULE();
 }
 
 
-RCT_EXPORT_METHOD(initializeSDK:(NSString *)unitID) 
+RCT_EXPORT_METHOD(initializeSDK:(NSString *)unitID, (NSString *)ironSourceAppKey) 
 {
+    // declare your ironSource App Key and Ad Units
+    NSDictionary * ironSourceConfig = @{@"applicationKey":ironSourceAppKey};
+    NSMutableDictionary * ironConfig = [@{@"IronSourceAdapterConfiguration" :ironSourceConfig} mutableCopy];
+    
     MPGoogleGlobalMediationSettings *mpGoogleMediationSettings = [[MPGoogleGlobalMediationSettings alloc] init];
     VungleInstanceMediationSettings *vungleMediationSettings = [[VungleInstanceMediationSettings alloc] init];
     UnityAdsInstanceMediationSettings *unityAdsMediationSettings = [[UnityAdsInstanceMediationSettings alloc] init];
@@ -33,6 +37,7 @@ RCT_EXPORT_METHOD(initializeSDK:(NSString *)unitID)
     MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization: unitID];
     sdkConfig.globalMediationSettings = [[NSArray alloc] initWithObjects: @[mpGoogleMediationSettings, vungleMediationSettings, unityAdsMediationSettings, tapJoyMediationSettings], nil];
     sdkConfig.loggingLevel = MPBLogLevelDebug;
+    sdkConfig.mediatedNetworkConfigurations = ironConfig;
     [[MoPub sharedInstance] grantConsent];
     [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig completion:^{
         NSLog(@"SDK initialization complete");
