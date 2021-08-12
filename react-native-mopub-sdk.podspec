@@ -38,6 +38,10 @@ Pod::Spec.new do |s|
         ss.dependency 'MoPub-Vungle-Adapters', '6.8.0.1'
     end
     
+    s.subspec "Tapjoy" do |ss|
+        ss.dependency 'MoPub-TapJoy-Adapters', '12.7.1.0'
+    end
+    
     #s.subspec "AppLovin" do |ss|
     #    ss.dependency 'MoPub-Applovin-Adapters'
     #end
