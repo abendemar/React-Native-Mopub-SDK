@@ -5,6 +5,7 @@
 #import <MPGoogleGlobalMediationSettings.h>
 #import <VungleInstanceMediationSettings.h>
 #import <UnityAdsInstanceMediationSettings.h>
+#import <TapjoyGlobalMediationSettings.h>
 
 #import "MoPub.h"
 #import "MPMoPubConfiguration.h"
