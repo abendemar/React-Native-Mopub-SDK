@@ -6,6 +6,7 @@
 #import <VungleInstanceMediationSettings.h>
 #import <UnityAdsInstanceMediationSettings.h>
 #import <TapjoyGlobalMediationSettings.h>
+#import <IronSourceAdapterConfiguration.h>
 
 @implementation RNMoPubRewardedVideo
 
