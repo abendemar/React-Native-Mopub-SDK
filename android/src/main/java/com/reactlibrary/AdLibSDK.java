@@ -39,7 +39,7 @@ public class AdLibSDK extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void initializeSDK(final String unitID) {
+    public void initializeSDK(final String unitID, String ironSourceId) {
         Log.i("Mopub SDK", "Initialization...");
 
         Handler mainHandler = new Handler(getCurrentActivity().getMainLooper());
