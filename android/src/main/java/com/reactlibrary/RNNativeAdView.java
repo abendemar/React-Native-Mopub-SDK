@@ -93,7 +93,7 @@ public class RNNativeAdView extends RelativeLayout implements MoPubNative.MoPubN
                     try {
                         // impression data is available, process it here
                         Log.i("ILRD", "impression data adUnitId= " + adUnitId + "data=\n" + impressionData.getJsonRepresentation().toString(2));
-                        
+
                         event.putString("impressionData", impressionData.getJsonRepresentation().toString(2));
                     } catch (JSONException e) {
                         Log.e("ILRD", "Can't format impression data. e=" + e.toString() );
@@ -111,7 +111,7 @@ public class RNNativeAdView extends RelativeLayout implements MoPubNative.MoPubN
 
         // subscribe to start listening for impression data
         ImpressionsEmitter.addListener(mImpressionListener);
-        
+
         // Mopub rendered
         MoPubStaticNativeAdRenderer moPubStaticNativeAdRenderer = new MoPubStaticNativeAdRenderer(
             new ViewBinder.Builder(R.layout.native_ads_list)
@@ -128,7 +128,7 @@ public class RNNativeAdView extends RelativeLayout implements MoPubNative.MoPubN
             .textId(R.id.native_text)
             .privacyInformationIconImageId(R.id.native_privacy_information_icon_image)
             .build());
-        
+
         /*
         FacebookAdRenderer facebookAdRenderer = new FacebookAdRenderer(
         new FacebookAdRenderer.FacebookViewBinder.Builder(R.layout.native_ads_list)
@@ -164,11 +164,12 @@ public class RNNativeAdView extends RelativeLayout implements MoPubNative.MoPubN
 
     @Override
     public void onNativeLoad(NativeAd nativeAd) {
-        AdapterHelper adapterHelper = new AdapterHelper(mContext.getCurrentActivity(), 0, 3);
-        
+        //AdapterHelper adapterHelper = new AdapterHelper(mContext.getCurrentActivity(), 0, 3);
+        AdapterHelper adapterHelper = null;
+
         // Retrieve the pre-built ad view that AdapterHelper prepared for us.
         final View v = adapterHelper.getAdView(null, this, nativeAd, new ViewBinder.Builder(0).build());
-        
+
         // Set the native event listeners (onImpression, and onClick).
         nativeAd.setMoPubNativeEventListener(moPubNativeEventListener);
 
@@ -178,10 +179,10 @@ public class RNNativeAdView extends RelativeLayout implements MoPubNative.MoPubN
             v.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
             int height = v.getMeasuredHeight();
             int width = v.getMeasuredWidth();
-            
+
             Log.i("ILRD", "HEIGHT "+ height);
             Log.i("ILRD", "WIDTH "+ width);
-            
+
             WritableMap event = Arguments.createMap();
             event.putInt("height", height);
             event.putInt("width", width);
