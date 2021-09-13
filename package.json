@@ -21,15 +21,13 @@
   "license": "Apache-2.0",
   "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
-  "peerDependencies": {
-    "react": ">= 16.6.3",
-    "react-native": ">= 0.62.2",
-    "react-native-windows": "0.64.0"
-  },
   "devDependencies": {
     "metro-react-native-babel-preset": "0.66.2",
-    "react": "17.0.1",
-    "react-native": "0.64.2",
-    "react-native-windows": "0.64.2"
+    "react": "^16.13.1",
+    "react-native": "^0.63.1"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
   }
 }
