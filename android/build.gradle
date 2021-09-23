@@ -3,7 +3,7 @@ buildscript {
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
-        //maven { url 'https://sdk.tapjoy.com/' }
+        maven { url 'https://sdk.tapjoy.com/' }
         maven { url 'https://android-sdk.is.com/'}
     }
 
@@ -74,8 +74,8 @@ dependencies {
     //implementation 'com.mopub.mediation:facebookaudiencenetwork:6.6.0.0'
 
     //// Tapjoy
-    //implementation 'com.tapjoy:tapjoy-android-sdk:12.8.1@aar'
-    //implementation 'com.mopub.mediation:tapjoy:12.8.1.0'
+    implementation 'com.tapjoy:tapjoy-android-sdk:12.8.1@aar'
+    implementation 'com.mopub.mediation:tapjoy:12.8.1.0'
 
     // Vungle
     implementation 'com.vungle:publisher-sdk-android:6.10.1'
