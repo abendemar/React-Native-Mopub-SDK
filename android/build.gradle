@@ -66,12 +66,12 @@ dependencies {
 
     // Required for Native Ads
     // Google (AdMob & Ad Manager)
-    // implementation 'com.google.android.gms:play-services-ads:20.3.0'
-    // implementation 'com.mopub.mediation:admob:20.3.0.0'
+    implementation 'com.google.android.gms:play-services-ads:20.3.0'
+    implementation 'com.mopub.mediation:admob:20.3.0.0'
 
     // Facebook Network
-    //implementation 'com.facebook.android:audience-network-sdk:6.6.0'
-    //implementation 'com.mopub.mediation:facebookaudiencenetwork:6.6.0.0'
+    implementation 'com.facebook.android:audience-network-sdk:6.6.0'
+    implementation 'com.mopub.mediation:facebookaudiencenetwork:6.6.0.0'
 
     //// Tapjoy
     // implementation 'com.tapjoy:tapjoy-android-sdk:12.8.1@aar'
