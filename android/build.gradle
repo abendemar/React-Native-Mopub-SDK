@@ -50,7 +50,7 @@ repositories {
     mavenCentral()
     google()
     maven { url 'https://jitpack.io' }
-    //maven { url 'https://sdk.tapjoy.com/' }
+    maven { url 'https://sdk.tapjoy.com/' }
 }
 
 dependencies {
